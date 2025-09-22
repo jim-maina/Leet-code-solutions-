@@ -1,0 +1,19 @@
+Problem 7: Reverse Integer
+
+**Idea**  
+Take an integer `x` and return its digits reversed. If reversing causes the value to go outside the 32-bit signed integer range, return 0.
+
+**Steps (Mathematical)**  
+1. Start with `reversed = 0`.  
+2. Extract last digit: `digit = x % 10`.  
+3. Add it to reversed: `reversed = reversed * 10 + digit`.  
+4. Remove last digit: `x = x / 10`.  
+5. Repeat until `x = 0`.  
+6. If `reversed` is outside `[-2^31, 2^31-1]`, return 0.
+
+**Example**  
+x = 123  
+- Loop1: digit=3 → reversed=3  
+- Loop2: digit=2 → reversed=32  
+- Loop3: digit=1 → reversed=321  
+Answer = **321**
