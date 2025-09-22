@@ -1,0 +1,27 @@
+Problem 2353: Design a Food Rating System
+
+**Idea**  
+We need a system that stores foods, their cuisines, and ratings.  
+We can:  
+- Change ratings of foods.  
+- Query the highest-rated food in a cuisine.  
+
+**Steps (Logical Design)**  
+1. Use a mapping of `food → (cuisine, rating)`.  
+2. For each cuisine, keep a list of foods sorted by rating (and alphabetically if tied).  
+3. When updating a food’s rating:  
+   - Update the mapping.  
+   - Update the cuisine’s list.  
+4. When asked for highest-rated food of a cuisine:  
+   - Return the first item in that cuisine’s sorted list.  
+
+**Example**  
+Foods = ["sushi", "ramen"]  
+Cuisines = ["japanese", "japanese"]  
+Ratings = [5, 7]  
+
+- Highest rated in "japanese" = "ramen"  
+- Update rating of ramen to 3  
+- Now highest rated = "sushi"
+
+---
