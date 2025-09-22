@@ -1,0 +1,15 @@
+ Problem 912: Sort an Array
+
+**Idea**  
+Return the array sorted in ascending order.
+
+**Methods**  
+1. **Built-in sort** (easiest, usually QuickSort / MergeSort inside).  
+2. **Manual Sorting Algorithms**:  
+   - Bubble Sort: compare pairs, swap if out of order, repeat.  
+   - Merge Sort: divide array in halves, sort each half, merge back.  
+   - Quick Sort: pick pivot, split into smaller/bigger, sort recursively.  
+
+**Example**  
+nums = [5, 2, 3, 1]  
+- After sorting: [1, 2, 3, 5]
